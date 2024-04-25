@@ -40,7 +40,7 @@ pub fun defaultKUnitHandler(action: () -> kunit ()) : io ()
 
   with handler
     fun pass()
-      println("passed: " ++ modulename ++ " \"" ++ testname ++ (if inputsShow == "" then  "" else "\", scenario: (" ++ inputsShow ++")"))
+      println("passed: " ++ modulename ++ " \"" ++ testname ++ "\"" ++ (if inputsShow == "" then  "" else ", scenario: (" ++ inputsShow ++")"))
     fun fail(assertion-function-name, koka-file-line, expected, actually)
       println("failed: " ++ modulename ++ " \"" ++ testname ++ "\", scenario: (" ++ inputsShow ++")\n  " ++ assertion-function-name ++ " failure at " ++ koka-file-line ++ "\n    expected: " ++ expected ++ "\n    actually: " ++ actually)
     fun fatal(message)
