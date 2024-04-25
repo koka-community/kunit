@@ -1,9 +1,15 @@
 # KUnit
+
 Inspired by XUnit.
+
 ## Features
+
 ### Test Suites
+
 A file represents a test suite, and is included in the test runner output.
+
 **/tests/fizzbuzz.kk:**
+
 ```koka
 pub fun tests() [
     test("Given 3 then returns fizz", fn()
@@ -14,14 +20,18 @@ pub fun tests() [
     )
 ]
 ```
+
 **output:**
+
 ```koka
 passed: tests/fizzbuzz "Given 3 then returns fizz"
 passed: tests/fizzbuzz "Given 5 then returns buzz"
 ```
 
 ### Test Skipping
+
 **/tests/foobar.kk:**
+
 ```koka
 pub fun tests() [
     skip("Given foo then returns bar", fn()
@@ -29,12 +39,17 @@ pub fun tests() [
     )
 ]
 ```
+
 **output:**
+
 ```koka
 skipped: tests/foobar "Given foo then returns bar"
 ```
+
 ### Test Scenarios
+
 **/tests/wordassert.kk:**
+
 ```koka
 pub fun words/count(input)
   input.split(" ").length
@@ -51,7 +66,9 @@ pub fun tests() [
   ))
 ]
 ```
+
 **output:**
+
 ```koka
 passed: tests/wordassert "Given some words, returns the expected word count.", scenario: (("some example string",3))
 passed: tests/wordassert "Given some words, returns the expected word count.", scenario: (("another example string",3))
@@ -63,6 +80,7 @@ failed: tests/wordassert "Given some words, returns the expected word count.", s
 
 ## Quick Start
 Build the `main.kk` test file and execute the generated file to run tests and see test run output.
+
 ```
 > koka example/tests/main.kk
 
