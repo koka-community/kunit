@@ -48,6 +48,8 @@ skipped: tests/foobar "Given foo then returns bar"
 
 ### Test Scenarios
 
+Scenarios allow you to execute the same test code with different input parameters via the `scenario` function. When variable input parameters are provided via the `scenario` function, the inputs are included in the test runner output.
+
 **/tests/wordassert.kk:**
 
 ```koka
