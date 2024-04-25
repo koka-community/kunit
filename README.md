@@ -78,6 +78,10 @@ failed: tests/wordassert "Given some words, returns the expected word count.", s
     actually: 4
 ```
 
+### Built-In Assertions
+* `assert/equal`
+* ... (more to come!)
+
 ## Quick Start
 Build the `main.kk` test file and execute the generated file to run tests and see test run output.
 
